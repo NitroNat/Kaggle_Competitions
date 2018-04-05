@@ -1,0 +1,67 @@
+##########################################################################################################
+List Competitions
+usage: kaggle competitions list [-h] [-p PAGE] [-s SEARCH] [-v]
+kaggle competitions list -s health
+
+List Competitions Files
+usage: kaggle competitions files [-h] [-c COMPETITION] [-v] [-q]
+kaggle competitions files -c favorita-grocery-sales-forecasting
+
+Download competition Files:
+usage: kaggle competitions download [-h] [-c COMPETITION] [-f FILE] [-p PATH] [-w] [-o] [-q]
+kaggle competitions download -c favorita-grocery-sales-forecasting
+kaggle competitions download -c favorita-grocery-sales-forecasting -f test.csv.7z
+
+Submit to Competition:
+usage: kaggle competitions submit [-h] [-c COMPETITION] -f FILE -m MESSAGE [-q]
+kaggle competitions submit -c favorita-grocery-sales-forecasting -f sample_submission_favorita.csv.7z -m "My submission message"
+
+List Submisstions:
+usage: kaggle competitions submissions [-h] [-c COMPETITION] [-v] [-q]
+kaggle competitions submissions -c favorita-grocery-sales-forecasting
+
+##########################################################################################################
+
+# Datasets are created by users
+List Datasets:
+usage: kaggle datasets list [-h] [-p PAGE] [-s SEARCH] [-v]
+kaggle datasets list -s demographics
+
+List Files for Dataset:
+usage: kaggle datasets files [-h] -d DATASET [-v]
+kaggle datasets files -d zillow/zecon
+
+Download datasets files:
+usage: kaggle datasets download [-h] -d DATASET [-f FILE] [-p PATH] [-w] [-o][-q]
+kaggle datasets download -d zillow/zecon
+kaggle datasets download -d zillow/zecon -f State_time_series.csv
+
+Create a new dataset:
+usage: kaggle datasets create [-h] -p FOLDER [-u] [-q]
+kaggle datasets create -r -p /path/to/dataset
+
+Create a new dataset version:
+usage: kaggle datasets version [-h] -m VERSION_NOTES -p FOLDER [-q]
+kaggle datasets version -p /path/to/dataset -m "Updated data"
+
+Initialize metadata file for dataset creation:
+usage: kaggle datasets init [-h] -p FOLDER
+kaggle datasets init -p /path/to/dataset
+
+##########################################################################################################
+# Config files
+View current config values:
+usage: kaggle config path [-h] [-p PATH]
+kaggle config path -p C:\
+
+View current config values:
+usage: kaggle config view [-h]
+kaggle config view
+
+Set a configuration value:
+usage: kaggle config set [-h] -n NAME -v VALUE
+kaggle config set -n competition -v titanic
+
+Clear a configuration value:
+usage: kaggle config unset [-h] -n NAME
+kaggle config unset -n competition
